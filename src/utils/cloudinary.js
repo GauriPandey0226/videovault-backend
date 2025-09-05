@@ -1,6 +1,9 @@
 import {v2 as cloudinary} from "cloudinary"
-import fs from "fs"
+import fs from "fs";
+import dotenv from "dotenv";
+dotenv.config();// added after seeing undefined error for cloudinary env variables
 
+console.log("Cloudinary ENV TEST:", process.env.CLOUDINARY_CLOUD_NAME, process.env.CLOUDINARY_API_KEY);
 
 cloudinary.config({ 
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
